@@ -65,7 +65,7 @@ def main(args):
     playlists_to_dl = np.sort(df['page_dir'].unique())
 
     for page_dir in playlists_to_dl:
-        vid_dir_t = os.path.join(video_dir, page_dir)
+        vid_dir_t = os.path.join(video_dir)
         pdf = df[df['page_dir'] == page_dir]
         if len(pdf) > 0:
             if not os.path.exists(vid_dir_t):
